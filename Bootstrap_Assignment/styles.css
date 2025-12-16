@@ -1,0 +1,269 @@
+:root {
+  --bg: #121214;
+  --card-bg: #1f1f21;
+  --silver: #c0c0c0;
+  --muted: #9e9e9e;
+  --accent: #e03a3a;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rajdhani", sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--silver);
+}
+
+/* NAVBAR */
+.custom-navbar {
+  background-color: rgba(20, 20, 20, 0.55) !important;
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+  z-index: 1000;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+}
+
+.custom-navbar .navbar-brand {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.08em;
+}
+
+.custom-navbar .nav-link {
+  color: var(--silver) !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  background-color: rgba(224, 58, 58, 0.15);
+  color: var(--white) !important;
+}
+
+.nav-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding-top: 120px;
+  position: relative;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 55%),
+              linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-container {
+  position: absolute;
+  top: 38%;
+  width: 100%;
+}
+
+.name-banner {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.15em;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  color: var(--silver);
+}
+
+.header-info {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  color: var(--muted);
+}
+
+.profile-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(220px, 40vw, 380px);
+}
+
+.hero-profile {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* SECTIONS */
+.about-section,
+.contact-section,
+.testimonials-section {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 4rem 2rem;
+  margin: 3rem 2rem;
+  border-radius: 30px;
+}
+
+.projects-section {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 4rem 2rem;
+  margin: 3rem 2rem;
+  border-radius: 30px;
+}
+
+.skills-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ABOUT */
+.about-name-banner {
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.45);
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9rem;
+}
+
+.about-img {
+  max-height: 420px;
+  object-fit: cover;
+}
+
+/* SKILLS */
+.skills-title {
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.12em;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.skill-card {
+  background-color: rgba(31, 31, 33, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(224, 58, 58, 0.5);
+  box-shadow: 0 10px 30px rgba(224, 58, 58, 0.12);
+}
+
+.skill-card-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.skill-row {
+  margin-bottom: 1rem;
+}
+
+.skill-row label {
+  font-size: 0.9rem;
+  color: var(--silver);
+  margin-bottom: 0.35rem;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.progress-bar {
+  background-color: var(--accent);
+  border-radius: 10px;
+}
+
+.badge {
+  margin: 0.2rem 0.15rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+.bg-danger-soft { background: rgba(224, 58, 58, 0.2) !important; border: 1px solid var(--accent); color: var(--accent) !important; }
+.bg-info-soft { background: rgba(23, 162, 184, 0.2) !important; border: 1px solid #17a2b8; color: #17a2b8 !important; }
+.bg-warning-soft { background: rgba(255, 193, 7, 0.2) !important; border: 1px solid #ffc107; color: #ffc107 !important; }
+.bg-success-soft { background: rgba(40, 167, 69, 0.2) !important; border: 1px solid #28a745; color: #28a745 !important; }
+
+/* PROJECTS */
+.project-card {
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* TESTIMONIALS */
+.testimonial-card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--silver);
+}
+
+/* CONTACT */
+.contact-link {
+  color: var(--silver);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.35);
+}
+
+.contact-link:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-section,
+  .projects-section,
+  .testimonials-section,
+  .contact-section {
+    margin: 2rem 1rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .custom-navbar {
+    top: 10px;
+    border-radius: 20px;
+  }
+}
