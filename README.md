@@ -1,1 +1,0 @@
-# almarlubbe-lgtm.github.io
